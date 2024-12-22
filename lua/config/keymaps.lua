@@ -8,7 +8,7 @@ local open_plugins_lua = function()
 end
 
 -- Fuzzy finding
-vim.api.nvim_set_keymap("n", "<C-f>", ":Telescope current_buffer_fuzzy_find<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<M-f>", ":Telescope current_buffer_fuzzy_find<CR>", { noremap = true, silent = true })
 -- Find files like in modern IDEs
 vim.api.nvim_set_keymap("n", "<C-O>", ":Telescope find_files<CR>", { noremap = true, silent = true })
 

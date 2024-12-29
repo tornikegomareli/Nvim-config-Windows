@@ -1,9 +1,6 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
--- Import the comment utility
-local comment_utils = require("utils.comments")
-
 -- Helper function to find project root
 local function get_project_root()
   -- Try to find root based on common project markers
@@ -190,6 +187,6 @@ keymap.set("n", "<leader>xs", function()
   })
 end, { desc = "Search in files (Xcode style)" })
 
--- Comment keybindings
-vim.api.nvim_set_keymap("n", "<M-/>", ':lua require("utils.comment").toggle_comment()<CR>', opts)
-vim.api.nvim_set_keymap("v", "<M-/>", ':lua require("utils.comment").toggle_comment()<CR>', opts)
+-- Add these lines for comment.nvim keybindings
+vim.api.nvim_set_keymap("n", "<M-/>", "gcc", { noremap = true })
+vim.api.nvim_set_keymap("v", "<M-/>", "gc", { noremap = true })
